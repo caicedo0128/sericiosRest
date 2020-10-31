@@ -18,9 +18,9 @@ export class FormularioPeliculaComponent implements OnInit {
   ngOnInit(): void {
     this.idPelicula = this.route.snapshot.params.idPelicula;
     console.log('recupera el parametro idPelicula:' + this.idPelicula);
-    if(this.idPelicula != null){
+    if (this.idPelicula != null){
       const pelicula  = this.peliculaService.encontrarPelicula(this.idPelicula);
-      if(pelicula != null){
+      if (pelicula != null){
         this.nombreInput = pelicula.nombre;
       }
     }
@@ -29,8 +29,8 @@ export class FormularioPeliculaComponent implements OnInit {
   // tslint:disable-next-line: typedef
   guardarPelicula(){
     const pelicula = new Pelicula(this.idPelicula, this.nombreInput, this.anioInput);
-    if(this.idPelicula != null){
-      this.peliculaService.modificarPelicula(this.idPelicula,pelicula);
+    if (this.idPelicula != null){
+      this.peliculaService.modificarPelicula(this.idPelicula, pelicula);
     }else{
       this.peliculaService.agregarPelicula(pelicula);
       this.router.navigate(['peliculas']);
