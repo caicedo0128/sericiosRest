@@ -15,7 +15,7 @@ export class DataService {
 
   // tslint:disable-next-line: typedef
   agregarPelicula(pelicula: Pelicula){
-    return this.httpClient.post(this.url,pelicula);
+    return this.httpClient.post(this.url, pelicula);
   }
 
   // tslint:disable-next-line: typedef
