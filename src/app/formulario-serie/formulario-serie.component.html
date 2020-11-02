@@ -1,8 +1,8 @@
 <div class="box">
-  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && guardarPelicula()">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && guardarSerie()">
     <input type="text" name="nombre" placeholder="nombre" [(ngModel)]="nombreInput" required/>
     <input type="text" name="anio" placeholder="anio" [(ngModel)]="anioInput" required/>
     <button type="submit" style="cursor: pointer">+</button>
-    <button *ngIf = "idPelicula != null" type="submit" style="cursor: pointer" class="buttonRed" (click)="eliminarPelicula()">-</button>
+    <button *ngIf = "idSerie != null" type="submit" style="cursor: pointer" class="buttonRed" (click)="eliminarSerie()">-</button>
   </form>
 </div>

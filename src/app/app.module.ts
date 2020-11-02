@@ -1,3 +1,4 @@
+import { SerieService } from './serie-service';
 import { DataService } from './data-service';
 import { PeliculaService } from './pelicula-service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,12 +10,16 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioPeliculaComponent } from './formulario-pelicula/formulario-pelicula.component';
 import { FormsModule } from '@angular/forms';
+import { SeriesComponent } from './series/series.component';
+import { FormularioSerieComponent } from './formulario-serie/formulario-serie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
-    FormularioPeliculaComponent
+    FormularioPeliculaComponent,
+    SeriesComponent,
+    FormularioSerieComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [PeliculaService, DataService],
+  providers: [PeliculaService, DataService, SerieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

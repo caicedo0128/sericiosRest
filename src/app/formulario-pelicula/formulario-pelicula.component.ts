@@ -5,7 +5,7 @@ import { Pelicula } from '../pelicula.model';
 
 @Component({
   selector: 'app-formulario-pelicula',
-  templateUrl: './formulario-pelicula.component.html',
+  templateUrl: './formulario-pelicula.component.html'
 })
 export class FormularioPeliculaComponent implements OnInit {
 

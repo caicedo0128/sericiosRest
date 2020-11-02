@@ -23,6 +23,7 @@ export class PeliculasComponent implements OnInit {
     );
   }
 
+  // tslint:disable-next-line: typedef
   agregar(){
     console.log('se va agregar');
     this.router.navigate(['./peliculas/agregar']);

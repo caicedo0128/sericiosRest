@@ -39,7 +39,7 @@ export class PeliculaService {
     peliculaModificada.idPelicula = pelicula.idPelicula;
     peliculaModificada.nombre = pelicula.nombre;
     peliculaModificada.anio = pelicula.anio;
-    this.dataService.modificarPelicula(idPeliculaParam,pelicula);
+    this.dataService.modificarPelicula(idPeliculaParam, pelicula);
   }
 
   // tslint:disable-next-line: typedef

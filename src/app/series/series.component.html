@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+  <button style="cursor: pointer" (click)="agregar()"> + </button>
+</div>
+
+<div class="box">
+  <div class="item" *ngFor="let serie of series">
+    <ul>
+      <li>
+        <a [routerLink] = "['/series', serie.idSerie]">
+          {{serie.nombre}} {{serie.anio}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
